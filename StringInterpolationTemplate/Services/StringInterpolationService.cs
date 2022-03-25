@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using StringInterpolationTemplate.Utils;
 
-namespace StringInterpolationTemplate.Services;
+namespace StringInterpolationTemplate.Services { 
 
 public class StringInterpolationService : IStringInterpolationService
 {
@@ -28,7 +28,11 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+            string month = $"{_date:MMMM}";
+            string day = $"{_date:dd}";
+            string year = $"{_date: yyyy}";
+            string currentDate = $"{month} {day}, {year}";
+
     }
 
     public string Number03()
@@ -77,4 +81,5 @@ public class StringInterpolationService : IStringInterpolationService
     }
 
     //2.2019.01.22
+}
 }

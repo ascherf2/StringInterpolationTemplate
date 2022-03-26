@@ -24,44 +24,93 @@ public class StringInterpolationService : IStringInterpolationService
         Console.WriteLine(answer);
 
         return answer;
+        
+            throw new NotImplementedException();
     }
 
+    //2.2019.01.22
     public string Number02()
     {
-            string month = $"{_date:MMMM}";
-            string day = $"{_date:dd}";
-            string year = $"{_date: yyyy}";
-            string currentDate = $"{month} {day}, {year}";
+            var date=_date.Now.ToString($" {today:yyyy}.{today:MM}.{today:dd}");  
+            var answer = $"{date}";
+            Console.WriteLine(answer);
 
+            return answer;
+
+                throw new NotImplementedException();
     }
 
     public string Number03()
     {
+            var date=_date.Now.ToString($"Day {today:dd} of {today:MMMM}, {today:yyyy}");
+            var answer = $"{date}";
+            Console.WriteLine(answer);
+
+            return answer;
+
         throw new NotImplementedException();
     }
 
     public string Number04()
     {
+
+           var date=_date.Now.ToString($"Year: {today:yyyy}, Month: {today:MM}, Day: {today:dd}");
+            var answer = $"{date}";
+            Console.WriteLine(answer);
+
+            return answer;
+
+
         throw new NotImplementedException();
     }
 
     public string Number05()
     {
+            var date=_date.Now.ToString($"{today:dddd}");
+
+            var answer = $"{date}";
+            Console.WriteLine(answer);
+
+            return answer;
+
         throw new NotImplementedException();
     }
 
     public string Number06()
+
     {
+            string currenthour = ($"{today:hh}");
+            string currentminute = ($"{today:mm}");
+            string currentdow = ($"{today:dddd}");
+
+            var date = _date.Now.ToString($"6. {currenthour,8}:{currentminute,8} {today:tt} {currentdow,5}");
+            var answer = $"{date}";
+            Console.WriteLine(answer);
+
+            return answer;
         throw new NotImplementedException();
     }
 
     public string Number07()
     {
+
+            var date = _date.Now.ToString($"7. h:{today:hh},m:{today:mm},s:{today:ss}");
+            var answer = $"{date}";
+            Console.WriteLine(answer);
+
+            return answer;
+
         throw new NotImplementedException();
     }
 
     public string Number08()
     {
+            var date = _date.Now.ToString($"8. {today:yyyy}.{today:MM}.{today:dd}.{today:hh}.{today:mm}.{today:ss}");
+             var answer = $"{date}";
+            Console.WriteLine(answer);
+
+            return answer;
+
         throw new NotImplementedException();
     }
 
@@ -80,6 +129,6 @@ public class StringInterpolationService : IStringInterpolationService
         throw new NotImplementedException();
     }
 
-    //2.2019.01.22
+   
 }
 }
